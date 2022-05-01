@@ -14,10 +14,14 @@ import (
 
 type sidesCountType int
 
+var SidesCircle sidesCountType = 0
+var SidesTriangle sidesCountType = 3
+var SidesSquare sidesCountType = 4
+
 func CalcSquare(sideLen float64, sidesNum sidesCountType) float64 {
 	switch sidesNum {
 	case 0:
-		return math.Pi * sideLen
+		return math.Pi * math.Pow(sideLen, 2)
 	case 3:
 		return math.Pow(sideLen, 2) * math.Sqrt(3) / 4
 	case 4:
